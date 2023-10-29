@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         finalList.add(p);
                     }
                 }
-                recyclerDataAdapter = new RecyclerDataAdapter(finalList, new RecyclerDataAdapter.OnItemClickListener() {
+                    recyclerDataAdapter = new RecyclerDataAdapter(finalList, new RecyclerDataAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(Creature p, int position) {
                         Intent intent = new Intent(MainActivity.this, ElementActivity.class);
@@ -83,6 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 recyclerView.setAdapter(recyclerDataAdapter);
             }
         });
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
     }
 }

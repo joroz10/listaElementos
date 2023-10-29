@@ -3,8 +3,10 @@ package com.example.listaelementos.models;
 import com.example.listaelementos.app.MyApplication;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class Creature extends RealmObject {
+    @PrimaryKey
     private int id;
     public String name;
     public String description;
